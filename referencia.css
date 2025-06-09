@@ -1,0 +1,551 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --light-gray: #d0d0d0;
+  --beige: #c4ad80;
+  --khaki: #c9b586;
+  --rust: #7f4c20;
+}
+
+body {
+  background: #000;
+  color: #e0d6b5;
+  font-family: 'Manrope', sans-serif; /* helyesen */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+.about {
+  padding: 40px 20px 80px;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  position: fixed !important;;
+}
+
+.logo {
+  height: 200px; /* duplája a 48px-nek */
+  width: auto;
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #e0d6b5;
+  font-weight: 500;
+}
+
+.cta-button {
+  background: #83764f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 10px 20px;
+  z-index: 10;
+  width: 72%;
+  margin-left: 0%!important;
+  border-radius: 999px;
+}
+
+/* Véglegesített topbar dizájn a dizájner verzió alapján */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0px;
+  position: relative;
+  z-index: 100;
+}
+
+/* Háttérsáv a topbar alatt */
+.topbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: -1;
+}
+
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 999px;
+}
+
+.main-nav .nav-links {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav .nav-links li a {
+  color: #969696;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.main-nav .nav-links li a:hover {
+  color: #ffffff;
+}
+
+.cta-button {
+  background-color: #83764f;
+  border-radius: 20px;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 24px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Mobile hamburger */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: #d6b15f;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background-color: #a35a1e;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px 0px 60px 0px;
+  gap: 60px;;
+}
+
+.footer-left {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 9%;
+}
+.copy {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1; /* ne legyen extra hely */
+  margin: 0;
+}
+
+
+.footer-right {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.footer-social,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  float: right;
+  text-align: right;
+  color: white;
+}
+
+.footer-social {
+  align-items: right;
+  float: right;
+
+}
+
+.footer-social h4,
+.footer-contact h4 {
+  color: #c4ad80;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.social-icons img {
+  height: 22px;
+  float: right;
+  align-items: right;
+}
+.footer-contact p{
+  margin: 0;
+}
+.about{
+  padding: 40px 20px 0px;
+}
+.cta-button {
+  background-color: #83764f;
+  color: #000;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-left: 0px;
+  color: black !important;
+}
+
+.cta-button:hover {
+  background-color: #e2c670; /* élénkebb sárga hoverre */
+}
+
+
+
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.thumbnails img.active {
+    border: 2px solid #ffcc66;
+    opacity: 1;
+}
+.orb4{
+  position: absolute;
+  right: 0;
+  bottom:100px;
+  width: 850px;
+  height: 850px;
+  margin-right: 0% !important;
+  margin-bottom:25%;
+  opacity: 1;
+  mix-blend-mode: hard-light;
+  z-index: -3;
+  pointer-events: none;         /* csökkentsd, hogy ne legyen domináns */
+
+}
+.topbar {
+    padding: 0 0px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 16px 0px;
+    position: relative;
+    z-index: 100;
+}
+
+@media (max-width: 955px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 0px 0;
+    border-bottom: 1px solid #d6b15f;
+    box-sizing: border-box;
+    z-index: 100;
+    flex-direction: column;
+    align-items: flex-start; /* BALRA rendezés */
+    margin-top: 30px;
+    border-radius: 0px;
+  }
+
+  .menu-toggle:checked + .menu-icon + .main-nav {
+    display: flex;
+  }
+
+
+  .menu-icon {
+    display: flex;
+    margin-right: 16px;
+  }
+
+  .main-nav .nav-links {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .main-nav .nav-links li a {
+    font-size: 1.3rem;
+  }
+  .cta-button {
+    margin-top: 10px;
+  }
+  .about-content {
+    margin-top: 1px!important;
+    padding: 0px;
+    padding-left: 20px;
+    margin-right: 10px;
+    text-align: left;
+  }
+  .about-title {
+    text-align: left;
+    font-size: 1.9rem;
+  }
+  .about-text{
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .about{
+    padding-right: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing:border-box ;
+    padding: 40px 0px 0px;
+  }
+  .orb4{
+    margin-bottom: 250px;
+  }
+  .logo{
+    margin-left: 15px;
+  }
+  .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  padding: 0 24px; /* kis belső margó */
+  margin: 0;
+  width: 100%;
+}
+
+.nav-links li {
+  text-align: left;  /* balra rendezés */
+  width: 100%;
+}
+
+.nav-links li a {
+  font-family: 'manrope', sans-serif;
+  font-size: 25px!important;
+  color: white!important;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 10px;
+  display: block;
+  font-style: bold;
+  line-height: 1.6;
+  font-size: 1.3rem!important;
+}
+
+.nav-links li:first-child a {
+  font-family: 'manrope', sans-serif;
+  background-color: #c4ad80;
+  color: black!important;
+  font-weight: bold;
+  border-radius: 0px;
+  padding: 14px 10px;
+  font-size: 18px!important;
+  width: 100%;
+  display: inline-block;
+}
+.footer-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 0px; /* NINCS oldalsó padding */
+  }
+
+  .footer-right {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .footer-left {
+    order: 3;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-social,
+  .footer-contact {
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    font-size: 0.91rem;
+  }
+
+  .footer-social::after,
+  .footer-contact::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100vw; /* teljes viewport szélesség */
+    height: 1px;
+    background-color: #a35a1e;
+    transform: translateX(0px); /* kompenzáljuk a paddinget */
+  }
+  .footer-left{
+    margin-top: 10px;
+  }
+  .copy {
+    padding-top: 0px;
+    font-size: 1rem;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+.social-icons {
+  display: flex;
+  justify-content: flex-start !important; /* BALRA rendezés */
+  align-items: center;
+  gap: 14px;
+  padding-top: 10px;
+}
+
+.social-icons img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+}
+.footer-social h4{
+  font-size: 1rem;
+
+}
+.footer-contact h4{
+  font-size: 1rem;
+}
+.topbar {
+    width: 100% !important;
+    padding: 0 0px;
+    box-sizing: border-box;
+
+  }
+.orb4{
+  display: none;
+}
+
+}
+/* Mobilon más elrendezés */
+
+.carousel-image {
+      transition: all 0.3s ease-in-out;
+    }
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 9999px;
+    }
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border 0.3s ease-in-out, transform 0.2s;
+}
+.thumbnail.active {
+  border-color: white;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.75rem 0rem;
+  padding-right: 2rem;
+  max-width: 1300px;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #e0d6b5;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+.logo{
+  margin-left: 0px!important;
+  margin-right: 25px;
+}
+

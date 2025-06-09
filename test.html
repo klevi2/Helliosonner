@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HELIOSONNER Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .carousel-image {
+      transition: all 0.3s ease-in-out;
+    }
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-black text-white font-sans">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <!-- Desktop Title -->
+    <div class="hidden md:block text-center text-xl font-semibold mb-4" id="carousel-title-desktop">
+      Oggau - 5,53kWp
+    </div>
+
+    <!-- Image and arrows -->
+    <div class="relative">
+      <img id="carousel-image" src="https://via.placeholder.com/800x400" alt="carousel" class="w-full h-auto rounded-lg carousel-image">
+
+      <!-- Arrows Desktop -->
+      <button onclick="prevImage()" class="hidden md:flex items-center justify-center carousel-button absolute top-1/2 left-4 transform -translate-y-1/2 w-10 h-10 text-white z-10">←</button>
+      <button onclick="nextImage()" class="hidden md:flex items-center justify-center carousel-button absolute top-1/2 right-4 transform -translate-y-1/2 w-10 h-10 text-white z-10">→</button>
+    </div>
+
+    <!-- Arrows & Title Mobile -->
+    <div class="md:hidden flex justify-between items-center mt-4">
+      <button onclick="prevImage()">←</button>
+      <span id="carousel-title-mobile" class="text-sm font-medium">Oggau - 5,53kWp</span>
+      <button onclick="nextImage()">→</button>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="flex overflow-x-auto space-x-2 mt-4">
+      <img src="/Side_IMG'S/Oggau 2.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(0)">
+      <img src="Side_IMG'S/Pfafftsaetten-2 1.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(1)">
+      <img src="Side_IMG'S/Sooss.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(2)">
+      <img src="Side_IMG'S/Steinbrunn.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(3)">
+      <img src="Side_IMG'S/Voesendorf.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(4)">
+      <img src="Side_IMG'S/Wien1032.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(5)">
+      <img src="Side_IMG'S/Wien502.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(6)">
+      <img src="Side_IMG'S/Wiesfleck 1.png" class="w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(7)">
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      { src: "/Side_IMG'S/Oggau 2.png", title: "Oggau - 5,53kWp" },
+      { src: "Side_IMG'S/Pfafftsaetten-2 1.png", title: "Vienna - 6,2kWp" },
+      { src: "Side_IMG'S/Sooss.png", title: "Graz - 4,7kWp" },
+      { src: "Side_IMG'S/Steinbrunn.png", title: "Steinbrunn - 4,7kWp" },
+      { src: "Side_IMG'S/Voesendorf.png", title: "Voesendorf - 4,7kWp" },
+      { src: "Side_IMG'S/Wien1032.png", title: "Wien - 4,7kWp" },
+      { src: "Side_IMG'S/Wien502.png", title: "Wien - 4,7kWp" },
+      { src: "Side_IMG'S/Wiesfleck 1.png", title: "Wiesfleck - 4,7kWp" },
+    ];
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const img = document.getElementById("carousel-image");
+      const titleDesktop = document.getElementById("carousel-title-desktop");
+      const titleMobile = document.getElementById("carousel-title-mobile");
+
+      img.src = images[currentIndex].src;
+      titleDesktop.textContent = images[currentIndex].title;
+      titleMobile.textContent = images[currentIndex].title;
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateCarousel();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateCarousel();
+    }
+
+    function changeImage(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+
+    window.onload = updateCarousel;
+  </script>
+</body>
+</html>

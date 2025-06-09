@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HELLIOSONNER</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='referencia.css'>
+    <script src='referencia.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+<body>
+    <section class="about">
+        <!--NavBar -->
+        <header class="topbar">
+            <img src="img/logo.png" style="height:70px;" alt="Heliosonner Logo" class="logo">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                <li><a href="index.html">Bemutatkozás</a></li>
+                <li><a href="Project.html">Projekt A-Z</a></li>
+                <li><a href="Referenciak.html">Referenciák</a></li>
+                <li><a href="Ipar.html">Ipari rendszerek</a></li>
+                <li><a href="HaziRend.html">Háztartási rendszerek</a></li>
+                <li><a class="kapcs" href="Kapcsolat.html">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Sider=) -->
+         <div class="max-w-5xl mx-auto px-4 py-8 mt-[90px]">
+    <!-- Desktop Title -->
+    <div class="hidden md:block text-center text-xl font-semibold mb-4" id="carousel-title-desktop">
+      Oggau - 5,53kWp
+    </div>
+
+    <!-- Image and arrows -->
+    <!-- Image and arrows -->
+    <div class="relative">
+      <img id="carousel-image" src="https://via.placeholder.com/800x400" alt="carousel" class="w-full h-auto max-h-[550px] object-contain rounded-lg carousel-image">
+
+      <!-- Arrows Desktop -->
+      <button onclick="prevImage()" class="hidden md:flex items-center justify-center carousel-button absolute top-1/2 left-4 transform -translate-y-1/2 w-10 h-10 text-white z-10"><img src="img/vissza nyíl (1).png" alt="Előző" class="w-10 h-10"></button>
+      <button onclick="nextImage()" class="hidden md:flex items-center justify-center carousel-button absolute top-1/2 right-4 transform -translate-y-1/2 w-10 h-10 text-white z-10"><img src="img/tovább nyíl.png" alt="Előző" class="w-10 h-10"></button>
+    </div>
+
+    <div class="md:hidden flex justify-between items-center mt-4">
+      <button onclick="prevImage()"><img src="img/vissza nyíl (1).png" alt="Előző" class="w-10 h-10"></button>
+      <span id="carousel-title-mobile" class="text-sm font-medium">Oggau - 5,53kWp</span>
+      <button onclick="nextImage()"><img src="img/tovább nyíl.png" alt="Előző" class="w-10 h-10"></button>
+    </div>
+
+
+    <!-- Thumbnails -->
+    <div class="flex justify-center flex-wrap gap-2 mt-4">
+      <img src="/Side_IMG'S/Apetlon9,96kWp.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(0)">
+      <img src="Side_IMG'S/Bruckneudorf.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(1)">
+      <img src="Side_IMG'S/Brunn am Gebierge615.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(2)">
+      <img src="Side_IMG'S/Kirchfidisch.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(3)">
+      <img src="Side_IMG'S/Oggau.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(4)">
+      <img src="Side_IMG'S/Pfafftsaetten.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(5)">
+      <img src="Side_IMG'S/Sooss.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(6)">
+      <img src="Side_IMG'S/Voesendorf.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(7)">
+      <img src="Side_IMG'S/Wien502.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(3)">
+      <img src="Side_IMG'S/Wien1032.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(4)">
+      <img src="Side_IMG'S/Wiesfleck.jpg" class="thumbnail w-20 h-16 object-cover rounded cursor-pointer" onclick="changeImage(5)">
+    </div>
+  </div>
+
+
+
+         <div >
+        <img class="orb4" src="img/gömb.png" alt="háttérgömb">
+        </div>
+    <!--Footer -->
+        <hr class="footer-line" style="margin: 0px;padding:0px;">
+        <footer class="footer-bar">
+            <div class="footer-left">
+                <div class="copy">HELIOSONNER 2025</div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-social">
+                <h4>KÖVESSEN MINKET!</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="img/Group 30.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/Vector.png" alt="Facebook"></a>
+                </div>
+                </div>
+                <div class="footer-contact">
+                <h4>KAPCSOLAT</h4>
+                <p><strong>Magyar Attila Martin</strong> ügyvezető<br>+36 30/393-1053</p>
+                <p><strong>Kenéz Dániel</strong> ügyvezető<br>+36 20/212-9922</p>
+                <br>
+                <p>info@heliosonner.com</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+<script>
+  const images = [
+    { src: "Side_IMG'S/Apetlon9,96kWp.jpg", title: "Apelton - 9,96kWp" },
+    { src: "Side_IMG'S/Bruckneudorf.jpg", title: "Bruckneudorf - 5,33kWp" },
+    { src: "Side_IMG'S/Brunn am Gebierge615.jpg", title: "Brunn am Gebierge - 6,15kWp" },
+    { src: "Side_IMG'S/Kirchfidisch.jpg", title: "Kirchfidisch - 19,92kWp" },
+    { src: "Side_IMG'S/Oggau.jpg", title: "Oggau - 5,53kWp" },
+    { src: "Side_IMG'S/Pfafftsaetten.jpg", title: "Pfafftsaetten - 5,33kWp" },
+    { src: "Side_IMG'S/Sooss.jpg", title: "Sooss - 5,33kWp" },
+    { src: "Side_IMG'S/Voesendorf.jpg", title: "Voesendorf - 3,28kWp" },
+    { src: "Side_IMG'S/Wien502.jpg", title: "Wien - 5,02kWp" },
+    { src: "Side_IMG'S/Wien1032.jpg", title: "Wien - 10,32kWp" },
+    { src: "Side_IMG'S/Wiesfleck.jpg", title: "Wiesfleck - 5,4kWp" }
+  ];
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const img = document.getElementById("carousel-image");
+    const titleDesktop = document.getElementById("carousel-title-desktop");
+    const titleMobile = document.getElementById("carousel-title-mobile");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    // Frissítjük a fő képet és a címet
+    img.src = images[currentIndex].src;
+    titleDesktop.textContent = images[currentIndex].title;
+    titleMobile.textContent = images[currentIndex].title;
+
+    // Aktív thumbnail kiemelése
+    thumbnails.forEach((thumb, index) => {
+      thumb.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  }
+
+  function changeImage(index) {
+    currentIndex = index;
+    updateCarousel();
+  }
+
+  // Oldal betöltésekor frissítés
+  window.onload = updateCarousel;
+</script>
+
+
+</body>
+</html>
