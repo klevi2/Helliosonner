@@ -348,7 +348,9 @@ body {
     margin-top: 30px;
     border-radius: 0px;
   }
-
+  .center-box h1 {
+    font-size: 30px;
+  }
   .menu-toggle:checked + .menu-icon + .main-nav {
     display: flex;
   }
