@@ -17,12 +17,13 @@ body {
 
 }
 .about {
-  padding: 40px 20px 80px;
+  padding: 0px 20px 80px;
   max-width: 1300px;
   width: 100%;
   margin: auto;
   position: relative;
   padding-right: 0px!important;
+  padding-top: 1px!important;
 }
 
 
@@ -39,6 +40,8 @@ body {
   height: 200px; /* duplája a 48px-nek */
   width: auto;
   display: block;
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 95%, transparent 100%);
 }
 
 .main-nav ul {
@@ -94,7 +97,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 90px;
+  border-top-right-radius: 90px;
+  border-bottom-right-radius: 90px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(6px);
@@ -388,7 +392,9 @@ body {
   .menu-toggle:checked + .menu-icon + .main-nav {
     display: flex;
   }
-
+  .about {
+    padding-top: 0px!important;
+  }
 
   .menu-icon {
     display: flex;

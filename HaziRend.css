@@ -21,6 +21,7 @@ body {
   max-width: 1300px;
   margin: auto;
   position: relative;
+  padding-top: 1px!important;
 }
 
 .topbar {
@@ -35,6 +36,8 @@ body {
   height: 200px; /* duplája a 48px-nek */
   width: auto;
   display: block;
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 95%, transparent 100%);
 }
 
 .main-nav ul {
